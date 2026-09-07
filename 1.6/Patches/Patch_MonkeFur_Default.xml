@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!--
+    Default masked fur, settings toggle "maskedFur" (on by default): Biotech's Furskin art (or
+    whatever retexture overrides those paths) clipped to Monke's semi-fur pattern. Off = Monke's
+    own SemiFur is left untouched, i.e. the stock look. -->
+  <Operation Class="BiotechMonkeContinued.PatchOperationToggled">
+    <key>maskedFur</key>
+    <operations>
+      <li Class="PatchOperationConditional">
+        <xpath>Defs/GeneDef[defName="Monke_Furskin"]/renderNodeProperties/li[nodeClass="PawnRenderNode_Fur"]</xpath>
+        <match Class="PatchOperationReplace">
+          <xpath>Defs/GeneDef[defName="Monke_Furskin"]/renderNodeProperties/li[nodeClass="PawnRenderNode_Fur"]</xpath>
+          <value>
+            <li Class="BiotechMonkeContinued.PawnRenderNodeProperties_MaskedOverlay">
+              <debugLabel>Monke fur (Furskin art, semi-fur mask)</debugLabel>
+              <bodyTypeGraphicPaths>
+                <Male>Things/Pawn/Humanlike/Bodies/FurCovered_Male</Male>
+                <Female>Things/Pawn/Humanlike/Bodies/FurCovered_Female</Female>
+                <Hulk>Things/Pawn/Humanlike/Bodies/FurCovered_Hulk</Hulk>
+                <Fat>Things/Pawn/Humanlike/Bodies/FurCovered_Fat</Fat>
+                <Thin>Things/Pawn/Humanlike/Bodies/FurCovered_Thin</Thin>
+                <Child>Things/Pawn/Humanlike/Bodies/Naked_FurChild</Child>
+                <Baby>Things/Pawn/Humanlike/Bodies/Naked_FurChild</Baby>
+              </bodyTypeGraphicPaths>
+              <maskFurDef>MonkeFur</maskFurDef>
+              <baseLayer>5</baseLayer>
+              <rotDrawMode>Fresh, Rotting</rotDrawMode>
+              <colorType>Hair</colorType>
+              <parentTagDef>Body</parentTagDef>
+            </li>
+          </value>
+        </match>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

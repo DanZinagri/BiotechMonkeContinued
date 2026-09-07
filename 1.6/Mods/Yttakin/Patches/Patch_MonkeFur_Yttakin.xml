@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="Monke_Furskin"]/renderNodeProperties/li[nodeClass="PawnRenderNode_Fur" or @Class="BiotechMonkeContinued.PawnRenderNodeProperties_MaskedOverlay"]</xpath>
+    <value>
+      <li Class="BiotechMonkeContinued.PawnRenderNodeProperties_MaskedOverlay">
+        <debugLabel>Monke fur (Yttakin art, semi-fur mask)</debugLabel>
+        <bodyTypeGraphicPaths>
+          <Male>Things/Pawn/Humanlike/Bodies/NL/FurCovered_Male</Male>
+          <Female>Things/Pawn/Humanlike/Bodies/NL/FurCovered_Female</Female>
+          <Hulk>Things/Pawn/Humanlike/Bodies/NL/FurCovered_Hulk</Hulk>
+          <Fat>Things/Pawn/Humanlike/Bodies/NL/FurCovered_Fat</Fat>
+          <Thin>Things/Pawn/Humanlike/Bodies/NL/FurCovered_Thin</Thin>
+          <Child>Things/Pawn/Humanlike/Bodies/Naked_FurChild</Child>
+          <Baby>Things/Pawn/Humanlike/Bodies/Naked_FurChild</Baby>
+        </bodyTypeGraphicPaths>
+        <bodyTypeMaskPaths>
+          <Male>Masks/Male</Male>
+          <Female>Masks/Female</Female>
+          <Hulk>Masks/Hulk</Hulk>
+          <Fat>Masks/Fat</Fat>
+          <Thin>Masks/Thin</Thin>
+          <Child>Masks/Child</Child>
+          <Baby>Masks/Child</Baby>
+        </bodyTypeMaskPaths>
+        <baseLayer>5</baseLayer>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <colorType>Hair</colorType>
+        <parentTagDef>Body</parentTagDef>
+      </li>
+    </value>
+  </Operation>
+</Patch>

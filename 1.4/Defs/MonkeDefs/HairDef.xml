@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<HairDef>
+		<defName>Mk_Circlet</defName>
+		<label>Mk_Circlet</label>
+		<hairGender>Female</hairGender>
+		<texPath>Things/Pawn/Monkelike/MonkeHair/MonkeCirclet</texPath>
+		<category>Urban</category>
+		<styleTags>
+			<li>Urban</li>
+		</styleTags>
+		<requiredGene>Hair_Monke</requiredGene>
+	</HairDef>
+  
+	<HairDef>
+		<defName>Mk_Floof</defName>
+		<label>Mk_Floof</label>
+		<hairGender>Any</hairGender>
+		<texPath>Things/Pawn/Monkelike/MonkeHair/MonkeFloof</texPath>
+		<category>Urban</category>
+		<styleTags>
+			<li>Urban</li>
+		</styleTags>
+		<requiredGene>Hair_Monke</requiredGene>
+	</HairDef>
+  
+	<HairDef>
+		<defName>Mk_Rattail</defName>
+		<label>Mk_Rattail</label>
+		<hairGender>Any</hairGender>
+		<texPath>Things/Pawn/Monkelike/MonkeHair/MonkeRattail</texPath>
+		<category>Urban</category>
+		<styleTags>
+			<li>Urban</li>
+		</styleTags>
+		<requiredGene>Hair_Monke</requiredGene>
+	</HairDef>
+  
+	<HairDef>
+		<defName>Mk_Wild</defName>
+		<label>Mk_Wild</label>
+		<hairGender>Female</hairGender>
+		<texPath>Things/Pawn/Monkelike/MonkeHair/MonkeWild</texPath>
+		<category>Urban</category>
+		<styleTags>
+			<li>Urban</li>
+		</styleTags>
+		<requiredGene>Hair_Monke</requiredGene>
+	</HairDef>
+  
+</Defs>

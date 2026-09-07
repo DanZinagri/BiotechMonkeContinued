@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    Vanilla Textures Expanded - Facial Animation draws vanilla-styled heads, so under it the
+    Facial Animation head uses a vanilla-style Monke head with the maw drawn in. These are a
+    separate copy of the Average heads (MonkeHead/VTE/...), hand-adjusted to sit under FA's
+    eye and mouth positions; the Narrow heads do not fit those positions and are vanilla-only.
+    Same gender split as VTE itself: Normal for both, Pointy female-only, Wide (VTE "Square")
+    male-only. FA picks one applicable def at random per pawn (equal probability).
+    Textures: MonkeHead/VTE/<Variant>/<Gender>/normal_<rot>. -->
+  <FacialAnimation.HeadTypeDef MayRequire="nals.facialanimation">
+    <defName>DZ_BMP_MonkeHead_AverageNormal</defName>
+    <texPath>MonkeHead/VTE/Average_Normal</texPath>
+    <probability>1</probability>
+    <shader>Map/CutoutSkin</shader>
+    <shaderColorOverride>Map/CutoutSkinOverride</shaderColorOverride>
+    <targetGeneDefs>
+      <li>Nose_Monke</li>
+    </targetGeneDefs>
+  </FacialAnimation.HeadTypeDef>
+  <FacialAnimation.HeadTypeDef MayRequire="nals.facialanimation">
+    <defName>DZ_BMP_MonkeHead_AveragePointy</defName>
+    <texPath>MonkeHead/VTE/Average_Pointy</texPath>
+    <gender>Female</gender>
+    <probability>1</probability>
+    <shader>Map/CutoutSkin</shader>
+    <shaderColorOverride>Map/CutoutSkinOverride</shaderColorOverride>
+    <targetGeneDefs>
+      <li>Nose_Monke</li>
+    </targetGeneDefs>
+  </FacialAnimation.HeadTypeDef>
+  <FacialAnimation.HeadTypeDef MayRequire="nals.facialanimation">
+    <defName>DZ_BMP_MonkeHead_AverageWide</defName>
+    <texPath>MonkeHead/VTE/Average_Wide</texPath>
+    <gender>Male</gender>
+    <probability>1</probability>
+    <shader>Map/CutoutSkin</shader>
+    <shaderColorOverride>Map/CutoutSkinOverride</shaderColorOverride>
+    <targetGeneDefs>
+      <li>Nose_Monke</li>
+    </targetGeneDefs>
+  </FacialAnimation.HeadTypeDef>
+</Defs>

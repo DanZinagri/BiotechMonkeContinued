@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<!--	Facial animation	-->
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>[NL] Facial Animation - WIP</li>
+		</mods>	
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/GeneDef[defName="Nose_Monke"]/graphicData</xpath>
+					<value>
+						<graphicPath>Things/Pawn/Monkelike/MonkeNose/MMonkeNose</graphicPath>
+						<graphicPathFemale>Things/Pawn/Monkelike/MonkeNose/MonkeNose</graphicPathFemale>
+						<layer>PostSkin</layer>
+						<colorType>Skin</colorType>				
+						<useSkinShader>true</useSkinShader>
+						<drawIfFaceCovered>true</drawIfFaceCovered>
+					</value>
+				</li>	
+			</operations>
+		</match>
+	</Operation>
+</Patch>

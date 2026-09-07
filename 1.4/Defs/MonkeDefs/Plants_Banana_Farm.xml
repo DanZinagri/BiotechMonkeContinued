@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- Raw fruit -->
+
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>Banana</defName>
+    <label>bananas</label>
+    <description>Assorted bananas. Nice to eat, even when raw.</description>
+    <possessionCount>10</possessionCount>
+    <graphicData>
+      <texPath>Things/Plant/Banana/Banana</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.66</drawSize>
+    </graphicData>
+    <statBases>
+      <Nutrition>0.2</Nutrition>
+      <MarketValue>2.4</MarketValue>
+      <Mass>0.027</Mass>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>14</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <ingestible>
+      <preferability>RawTasty</preferability>
+      <tasteThought></tasteThought>
+      <foodType>VegetableOrFruit</foodType>
+    </ingestible>
+  </ThingDef>
+
+<!-- Tree crop -->
+
+  <ThingDef ParentName="TreeBase">
+    <defName>Plant_TreeBanana</defName>
+    <label>banana tree</label>
+    <description>A tropical tree that produces bananas, genetically engineered to sweeten its own product, and survive in slightly less-warm climates.</description>
+    <graphicData>
+      <texPath>Things/Plant/Banana/TreeBanana</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+        <shadowData>
+          <volume>(0.15, 0.3, 0.15)</volume>
+          <offset>(0,0,-0.38)</offset>
+        </shadowData>
+    </graphicData>
+    <selectable>true</selectable>
+    <statBases>
+      <Beauty>2</Beauty>
+      <BeautyOutdoors>2</BeautyOutdoors>
+      <Nutrition>1.5</Nutrition>
+    </statBases>
+    <minifiedDef IsNull="True" />
+    <ingestible />
+    <plant>
+      <dieIfLeafless>true</dieIfLeafless>
+      <growDays>16</growDays>
+      <visualSizeRange>0.8~2.0</visualSizeRange>
+      <sowMinSkill>8</sowMinSkill>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <sowResearchPrerequisites Inherit="False">
+        <li>Cocoa</li>
+      </sowResearchPrerequisites>
+      <topWindExposure>0.15</topWindExposure>
+      <mustBeWildToSow>false</mustBeWildToSow>
+      <immatureGraphicPath>Things/Plant/Banana/TreeBanana_Immature</immatureGraphicPath>
+      <harvestWork>310</harvestWork>
+      <harvestTag>Standard</harvestTag>
+      <forceIsTree>true</forceIsTree>
+      <harvestYield>20</harvestYield>
+      <harvestedThingDef>Banana</harvestedThingDef>
+      <harvestFailable>true</harvestFailable>
+    </plant>
+  </ThingDef>
+
+</Defs>

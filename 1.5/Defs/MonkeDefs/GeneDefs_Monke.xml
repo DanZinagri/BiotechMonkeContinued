@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <GeneDef ParentName="GeneHairStyleBase">
+    <defName>Hair_Monke</defName>
+    <label>big-haired</label>
+    <description>Carriers of this gene tend to grow big floofy hair.</description>
+    <iconPath>UI/Icons/Genes/Gene_HairStyleMonke</iconPath>
+    <displayOrderInCategory>58</displayOrderInCategory>
+    <hairTagFilter>
+      <whitelist>true</whitelist>
+      <tags>
+        <li>Urban</li>
+      </tags>
+    </hairTagFilter>
+  </GeneDef>
+  
+  <GeneDef>
+    <defName>Prehensile_Feet</defName>
+    <label>prehensile feet</label>
+    <description>Carriers of this gene have dexterous feet capable of grasping and maniplulating complex objects.</description>
+    <iconPath>UI/Icons/Genes/Gene_ElongatedFingers</iconPath>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <displayOrderInCategory>1000</displayOrderInCategory>
+    <capMods>
+      <li>
+        <capacity>Manipulation</capacity>
+        <offset>0.5</offset>
+      </li>
+    </capMods>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>-4</biostatMet>
+  </GeneDef>
+
+  <!-- Face type -->
+
+  <GeneDef ParentName="GeneEarsBase">
+    <defName>Ears_Monke</defName>
+    <label>round ears</label>
+    <description>Carriers of this gene have large round ears.</description>
+    <iconPath>UI/Icons/Genes/Gene_EarMonke</iconPath>
+    <renderNodeProperties>
+      <li>
+		<colorType>Skin</colorType>
+		<texPath>Things/Pawn/Monkelike/MonkeEars/MonkeEars</texPath>
+       <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <parentTagDef>Head</parentTagDef>
+       <drawData>
+         <defaultData>
+           <layer>70</layer>
+         </defaultData>
+       </drawData>
+      </li>
+    </renderNodeProperties>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>large</symbol></li>
+        <li><symbol>round</symbol></li>
+        <li><symbol>monkey</symbol></li>
+        <li><symbol>big</symbol></li>
+        <li><symbol>ape</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>large</symbol></li>
+        <li><symbol>round</symbol></li>
+        <li><symbol>monkey</symbol></li>
+        <li><symbol>big</symbol></li>
+        <li><symbol>ear</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+  
+  
+  <GeneDef ParentName="GeneBeardStyleBase">
+    <defName>Beard_Monke</defName>
+    <label>monke beard</label>
+    <description>Carriers of this gene have really excessive facial hair.</description>
+    <iconPath>UI/Icons/Genes/Gene_BeardStyleMonke</iconPath>
+    <renderNodeProperties>
+      <li>
+       <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+       <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+       <parentTagDef>Head</parentTagDef>
+       <texPaths>
+				<li>Things/Pawn/Monkelike/MonkeEars/BeardMonkeLong</li>
+				<li>Things/Pawn/Monkelike/MonkeEars/BeardMonkeShort</li>
+       </texPaths>
+       <colorType>Hair</colorType>
+       <visibleFacing>
+         <li>East</li>
+         <li>South</li>
+         <li>West</li>
+       </visibleFacing>
+       <drawData>
+         <defaultData>
+           <layer>71</layer>
+         </defaultData>
+       </drawData>
+      </li>
+     </renderNodeProperties>
+  </GeneDef>
+  
+  
+  <GeneDef>
+    <defName>Nose_Monke</defName>
+    <label>maw</label>
+    <description>Carriers of this gene have subtly extended maws filled with four large interlocking teeth.</description>
+    <iconPath>UI/Icons/Genes/Gene_SnoutMonke</iconPath>
+    <forcedHeadTypes>
+      <li>Monke_Gaunt</li>
+      <li>Female_Monke_Average1</li>
+      <li>Female_Monke_Average2</li>
+      <li>Female_Monke_Average3</li>
+      <li>Female_Monke_Narrow1</li>
+      <li>Female_Monke_Narrow2</li>
+      <li>Female_Monke_Narrow3</li>
+      <li>Male_Monke_Average1</li>
+      <li>Male_Monke_Average2</li>
+      <li>Male_Monke_Average3</li>
+      <li>Male_Monke_Narrow1</li>
+      <li>Male_Monke_Narrow2</li>
+      <li>Male_Monke_Narrow3</li>
+    </forcedHeadTypes>
+    <displayOrderInCategory>95</displayOrderInCategory>
+    <renderNodeProperties>
+    </renderNodeProperties>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>monkey</symbol></li>
+        <li><symbol>maw</symbol></li>
+        <li><symbol>snout</symbol></li>
+        <li><symbol>primate</symbol></li>
+        <li><symbol>ape</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>monkey</symbol></li>
+        <li><symbol>snout</symbol></li>
+        <li><symbol>chimp</symbol></li>
+        <li><symbol>primate</symbol></li>
+        <li><symbol>ape</symbol></li>
+        <li><symbol>nose</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+  
+  <!-- Body type -->
+  
+
+  <GeneDef>
+    <defName>Monke_Furskin</defName>
+    <label>semi-furskin</label>
+    <labelShortAdj>monke furskinned</labelShortAdj>
+    <description>Carriers of this gene grow thick fur on most of their body, which protects them from cold temperatures.</description>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <displayCategory>Miscellaneous</displayCategory>
+    <displayOrderInCategory>400</displayOrderInCategory>
+    <iconPath>UI/Icons/Genes/Gene_BodyMonke</iconPath>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <statOffsets>
+      <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+    </statOffsets>
+    <missingGeneRomanceChanceFactor>0.9</missingGeneRomanceChanceFactor>
+	<fur>MonkeFur</fur>
+    <skinIsHairColor>false</skinIsHairColor>
+    <tattoosVisible>true</tattoosVisible>
+    <renderNodeProperties>
+      <li>
+        <debugLabel>Fur</debugLabel>
+        <nodeClass>PawnRenderNode_Fur</nodeClass>
+        <workerClass>PawnRenderNodeWorker_Fur</workerClass>
+        <baseLayer>5</baseLayer>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <colorType>Hair</colorType>
+        <parentTagDef>Body</parentTagDef>
+      </li>
+    </renderNodeProperties>
+  </GeneDef>
+  
+  <GeneDef ParentName="GeneSkinColorOverride">
+    <defName>Skin_Tan</defName>
+    <label>tan skin</label>
+    <labelShortAdj>tan</labelShortAdj>
+    <description>Carriers of this gene produce a pigment that gives their skin a tan color.</description>
+    <skinColorOverride>(211,180,151)</skinColorOverride>
+    <displayOrderInCategory>0</displayOrderInCategory>
+    <symbolPack>
+      <wholeNameSymbols>
+        <li><symbol>tanskin</symbol></li>
+      </wholeNameSymbols>
+      <prefixSymbols>
+        <li><symbol>tan</symbol></li>
+        <li><symbol>dark</symbol></li>
+        <li><symbol>olive</symbol></li>
+        <li><symbol>bronze</symbol></li>
+      </prefixSymbols>
+    </symbolPack>
+  </GeneDef>
+  
+  
+</Defs>

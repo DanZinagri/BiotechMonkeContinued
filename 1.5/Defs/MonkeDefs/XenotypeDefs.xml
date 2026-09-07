@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <XenotypeDef>
+    <defName>Monke</defName>
+    <label>monke</label>
+    <description>One of the earliest Xenotypes. Ancient scientists believed that human-primate hybrids would be easy to splice due to the similarities in their DNA. The Monke were originally meant to be a race of fast, hard-hitting, super-soldiers but their inherent laziness and tenancy towards unwanted violence ultimately caused the project to be terminated. Most of the Monke surviving today are the direct descendants of failed experiments from the urbworld Liberty, where the Xenotype quickly outbred the local population, overthrew the local government and fled to the stars.</description>
+    <descriptionShort>With prehensile feet and stronger muscle fibers, the monke are fast moving, hard hitting close combatants. Their muscles have been better optimized for short bursts of strength but the extra energy causes the xenotype to be inherently lazy.</descriptionShort>
+	<inheritable>true</inheritable>
+	<iconPath>UI/Icons/Xenotypes/Monke</iconPath>
+    <genes>
+      <li>Hair_Monke</li>
+	  <li>Nose_Monke</li>
+      <li>Ears_Monke</li>
+      <li>Tail_Smooth</li>
+	  <li>Prehensile_Feet</li>
+	  <li>Monke_Furskin</li>
+      <li>Beard_Monke</li>
+      <li>Skin_Tan</li>
+	  
+	  <li>MoveSpeed_Quick</li>
+	  <li>Sleepy</li>
+	  <li>MeleeDamage_Strong</li>
+      <li>Aggression_Aggressive</li>
+      <li>Libido_High</li>
+      <li>RobustDigestion</li>
+      <li>AptitudePoor_Intellectual</li>
+      <li>AptitudePoor_Shooting</li>
+	  <li>AptitudePoor_Crafting</li>
+	  <li>AptitudePoor_Artistic</li>
+      <li>AptitudeTerrible_Cooking</li>
+      <li>AptitudeTerrible_Mining</li>
+	  
+	  <li>Hair_SnowWhite</li>
+	  <li>Hair_Gray</li>
+	  <li>Hair_SandyBlonde</li>
+	  <li>Hair_Blonde</li>
+    </genes>
+  </XenotypeDef>
+  
+  <XenotypeIconDef>
+    <defName>Crown</defName>
+    <texPath>UI/Icons/Xenotypes/Monke</texPath>
+  </XenotypeIconDef>
+
+</Defs>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<loadFolders>
+  <v1.4>
+    <li>/</li>
+    <li>1.4</li>
+  </v1.4>
+  <v1.5>
+    <li>/</li>
+    <li>1.5</li>
+  </v1.5>
+  <v1.6>
+    <li>/</li>
+    <li>1.6</li>
+    <!-- Facial Animation heads: NL-style painted head, or the vanilla-style baked heads when VTE supplies vanilla-styled faces. -->
+    <li IfModNotActive="VanillaExpanded.VTEXE.FacialAnims">1.6/Mods/NoVTEFacialAnimation</li>
+    <li IfModActive="VanillaExpanded.VTEXE.FacialAnims">1.6/Mods/VTEFacialAnimation</li>
+    <!--
+      Body mod folders. Exactly ONE loads: each folder is disallowed whenever a higher-priority
+      body mod is active, so precedence is explicit and does not depend on patch order.
+
+      Patch order within this mod: RimWorld walks this list BACKWARDS, so patch files in the
+      LAST entry are applied FIRST and the root 1.6/Patches run after every Mods/ folder. Patch
+      files are also keyed by their path relative to each folder, so two folders must not both
+      contain e.g. Patches/Foo.xml - only one of them would load.
+
+      Priority, highest first:
+        1. Sized Apparel        - swaps the base body to its own shape; its fur art is what fits
+        2. Yttakin retexture    - a deliberate, specific furskin replacement
+        3. VRE NL Compatible Body 2 - generic NL body set, overrides vanilla FurCovered paths
+        4. Scrubdaddy's Bodies  - generic body set, overrides vanilla FurCovered paths
+    -->
+    <li IfModActive="OTYOTY.SizedApparel">1.6/Mods/SizedApparel</li>
+    <li IfModActive="ChenDuXiu.Gene.MoreCuteYttakin"
+        IfModNotActive="OTYOTY.SizedApparel">1.6/Mods/Yttakin</li>
+    <li IfModActive="Mainrrow.VRECompatibleBody2"
+        IfModNotActive="OTYOTY.SizedApparel,ChenDuXiu.Gene.MoreCuteYttakin">1.6/Mods/VRECompatibleBody2</li>
+    <li IfModActive="ScrubDaddy.Bodies"
+        IfModNotActive="OTYOTY.SizedApparel,ChenDuXiu.Gene.MoreCuteYttakin,Mainrrow.VRECompatibleBody2">1.6/Mods/ScrubDaddy</li>
+  </v1.6>
+</loadFolders>

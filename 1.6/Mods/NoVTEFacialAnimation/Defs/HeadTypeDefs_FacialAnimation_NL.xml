@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- [NL] Facial Animation head with the maw drawn in, NL art style. Textures: MonkeHead/NL/<Gender>/normal_<rot>. -->
+  <FacialAnimation.HeadTypeDef MayRequire="nals.facialanimation">
+    <defName>DZ_BMP_MonkeHead</defName>
+    <texPath>MonkeHead/NL</texPath>
+    <probability>1</probability>
+    <shader>Map/CutoutSkin</shader>
+    <shaderColorOverride>Map/CutoutSkinOverride</shaderColorOverride>
+    <targetGeneDefs>
+      <li>Nose_Monke</li>
+    </targetGeneDefs>
+  </FacialAnimation.HeadTypeDef>
+</Defs>

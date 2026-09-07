@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Nose_Monke -->
+
+
+  <!-- Female -->
+  <!-- Average -->
+  <HeadTypeDef Name="FemaleMonkeAverageBase" ParentName="AverageBase" Abstract="True">
+    <gender>Female</gender>
+    <requiredGenes>
+      <li>Nose_Monke</li>
+    </requiredGenes>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="FemaleMonkeAverageBase">
+    <defName>Female_Monke_Average1</defName>
+    <graphicPath>MonkeHead/Average_Normal/Female/normal</graphicPath>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="FemaleMonkeAverageBase">
+    <defName>Female_Monke_Average2</defName>
+    <graphicPath>MonkeHead/Average_Pointy/Female/normal</graphicPath>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="FemaleMonkeAverageBase">
+    <defName>Female_Monke_Average3</defName>
+    <graphicPath>MonkeHead/Average_Wide/Female/normal</graphicPath>
+  </HeadTypeDef>
+  
+  <!-- Narrow -->
+  <HeadTypeDef Name="FemaleMonkeNarrowBase" ParentName="NarrowBase" Abstract="True">
+    <gender>Female</gender>
+    <requiredGenes>
+      <li>Nose_Monke</li>
+    </requiredGenes>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="FemaleMonkeNarrowBase">
+    <defName>Female_Monke_Narrow1</defName>
+    <graphicPath>MonkeHead/Narrow_Normal/Female/normal</graphicPath>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="FemaleMonkeNarrowBase">
+    <defName>Female_Monke_Narrow2</defName>
+    <graphicPath>MonkeHead/Narrow_Pointy/Female/normal</graphicPath>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="FemaleMonkeNarrowBase">
+    <defName>Female_Monke_Narrow3</defName>
+    <graphicPath>MonkeHead/Narrow_Wide/Female/normal</graphicPath>
+  </HeadTypeDef>
+  
+  
+  
+  <!-- Male -->
+  <!-- Average -->
+  <HeadTypeDef Name="MaleMonkeAverageBase" ParentName="AverageBase" Abstract="True">
+    <gender>Male</gender>
+    <requiredGenes>
+      <li>Nose_Monke</li>
+    </requiredGenes>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="MaleMonkeAverageBase">
+    <defName>Male_Monke_Average1</defName>
+    <graphicPath>MonkeHead/Average_Normal/Male/normal</graphicPath>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="MaleMonkeAverageBase">
+    <defName>Male_Monke_Average2</defName>
+    <graphicPath>MonkeHead/Average_Pointy/Male/normal</graphicPath>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="MaleMonkeAverageBase">
+    <defName>Male_Monke_Average3</defName>
+    <graphicPath>MonkeHead/Average_Wide/Male/normal</graphicPath>
+  </HeadTypeDef>
+
+  <!-- Narrow -->
+  <HeadTypeDef Name="MaleMonkeNarrowBase" ParentName="NarrowBase" Abstract="True">
+    <gender>Male</gender>
+    <requiredGenes>
+      <li>Nose_Monke</li>
+    </requiredGenes>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="MaleMonkeNarrowBase">
+    <defName>Male_Monke_Narrow1</defName>
+    <graphicPath>MonkeHead/Narrow_Normal/Male/normal</graphicPath>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="MaleMonkeNarrowBase">
+    <defName>Male_Monke_Narrow2</defName>
+    <graphicPath>MonkeHead/Narrow_Pointy/Male/normal</graphicPath>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="MaleMonkeNarrowBase">
+    <defName>Male_Monke_Narrow3</defName>
+    <graphicPath>MonkeHead/Narrow_Wide/Male/normal</graphicPath>
+  </HeadTypeDef>
+
+
+</Defs>

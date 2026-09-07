@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<!--	Facial animation	-->
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>[NL] Facial Animation - WIP</li>
+		</mods>	
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/GeneDef[defName="Nose_Monke"]/renderNodeProperties</xpath>
+					<value>
+      <li>
+		<colorType>Skin</colorType>
+		<texPath>Things/Pawn/Monkelike/MonkeNose/MMonkeNose</texPath>
+		<texPathFemale>Things/Pawn/Monkelike/MonkeNose/MonkeNose</texPathFemale>
+       <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <parentTagDef>Head</parentTagDef>
+       <drawData>
+         <defaultData>
+           <layer>51</layer>
+         </defaultData>
+       </drawData>
+      </li>
+					</value>
+				</li>	
+			</operations>
+		</match>
+	</Operation>
+</Patch>
