@@ -35,6 +35,8 @@
       <li MayRequire="sarg.alphagenes">AG_SurvivalInstinct_High</li>
       <li MayRequire="sarg.alphagenes">AG_PackMule</li>
       <li MayRequire="sarg.alphagenes">AG_HardBones</li>
+
+      <li MayRequire="pacca.genevoiceanimalsvanilla">PaccaVoiceVanillaMonkey</li>
 	  
 	  <li>Hair_SnowWhite</li>
 	  <li>Hair_Gray</li>
