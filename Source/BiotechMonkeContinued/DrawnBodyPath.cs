@@ -15,7 +15,7 @@ namespace BiotechMonkeContinued
         {
             string drawnBodyPath = pawn.Drawer?.renderer?.renderTree?.BodyGraphic?.path;
             if (!drawnBodyPath.NullOrEmpty()
-                && ContentFinder<Texture2D>.Get(drawnBodyPath + "_south", reportFailure: false) != null)
+                && TextureProbe.Exists(drawnBodyPath + "_south"))
             {
                 return drawnBodyPath;
             }
@@ -34,7 +34,7 @@ namespace BiotechMonkeContinued
             }
 
             string femaleBodyPath = bodyPath + "_Female";
-            if (ContentFinder<Texture2D>.Get(femaleBodyPath + "_south", reportFailure: false) == null)
+            if (!TextureProbe.Exists(femaleBodyPath + "_south"))
             {
                 return bodyPath;
             }

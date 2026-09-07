@@ -59,9 +59,9 @@ namespace BiotechMonkeContinued
             }
             // Graphic_Multi only looks for suffixed mask files. With none found it would draw the
             // texture unmasked, so refuse instead of silently drawing the whole thing.
-            if (ContentFinder<Texture2D>.Get(maskPath + "_south", reportFailure: false) == null
-                && ContentFinder<Texture2D>.Get(maskPath + "_north", reportFailure: false) == null
-                && ContentFinder<Texture2D>.Get(maskPath + "_east", reportFailure: false) == null)
+            if (!TextureProbe.Exists(maskPath + "_south")
+                && !TextureProbe.Exists(maskPath + "_north")
+                && !TextureProbe.Exists(maskPath + "_east"))
             {
                 Log.WarningOnce(
                     $"[Biotech Monke] No mask textures found at '{maskPath}' (expected {maskPath}_south.png, _north.png, _east.png). Node '{props.debugLabel}' will not draw.",
@@ -88,7 +88,7 @@ namespace BiotechMonkeContinued
 
         // Mirrors FemaleBodyVariants: non-male pawns get "<path>_Female" if that texture exists.
         // Paths that came through a FurDef may already carry the suffix (FBV postfixes
-        // FurDef.GetFurBodyGraphicPath), hence the EndsWith guard. One ContentFinder lookup at
+        // FurDef.GetFurBodyGraphicPath), hence the EndsWith guard. One cached texture probe at
         // graphic creation; GraphicDatabase caches the result per final path.
         private string WithFemaleVariant(Pawn pawn, string path)
         {
@@ -97,7 +97,7 @@ namespace BiotechMonkeContinued
                 return path;
             }
             string femalePath = path + "_Female";
-            return ContentFinder<Texture2D>.Get(femalePath + "_south", reportFailure: false) != null ? femalePath : path;
+            return TextureProbe.Exists(femalePath + "_south") ? femalePath : path;
         }
 
         private string MaskPathFor(Pawn pawn)

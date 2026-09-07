@@ -1,5 +1,0 @@
-E:\SteamLibrary\steamapps\common\RimWorld\Mods\BiotechMonkeContinued\1.6\Assemblies\BiotechMonkeContinued.dll
-E:\SteamLibrary\steamapps\common\RimWorld\Mods\BiotechMonkeContinued\Source\BiotechMonkeContinued\obj\Debug\BiotechMonkeContinued.csproj.AssemblyReference.cache
-E:\SteamLibrary\steamapps\common\RimWorld\Mods\BiotechMonkeContinued\Source\BiotechMonkeContinued\obj\Debug\BiotechMonkeContinued.GeneratedMSBuildEditorConfig.editorconfig
-E:\SteamLibrary\steamapps\common\RimWorld\Mods\BiotechMonkeContinued\Source\BiotechMonkeContinued\obj\Debug\BiotechMonkeContinued.csproj.CoreCompileInputs.cache
-E:\SteamLibrary\steamapps\common\RimWorld\Mods\BiotechMonkeContinued\Source\BiotechMonkeContinued\obj\Debug\BiotechMonkeContinued.dll
