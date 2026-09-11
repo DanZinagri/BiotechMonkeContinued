@@ -24,17 +24,18 @@
       contain e.g. Patches/Foo.xml - only one of them would load.
 
       Priority, highest first:
-        1. Sized Apparel        - swaps the base body to its own shape; its fur art is what fits
-        2. Yttakin retexture    - a deliberate, specific furskin replacement
-        3. VRE NL Compatible Body 2 - generic NL body set, overrides vanilla FurCovered paths
+        1. Yttakin retexture    - a deliberate, specific NL furskin replacement
+        2. VRE NL Compatible Body 2 - NL body set, overrides vanilla FurCovered paths
+        3. Sized Apparel        - swaps the base body to its own shape; used only when no NL
+                                  body set is present, since the NL art is what the body draws
         4. Scrubdaddy's Bodies  - generic body set, overrides vanilla FurCovered paths
     -->
-    <li IfModActive="OTYOTY.SizedApparel">1.6/Mods/SizedApparel</li>
-    <li IfModActive="ChenDuXiu.Gene.MoreCuteYttakin"
-        IfModNotActive="OTYOTY.SizedApparel">1.6/Mods/Yttakin</li>
+    <li IfModActive="ChenDuXiu.Gene.MoreCuteYttakin">1.6/Mods/Yttakin</li>
     <li IfModActive="Mainrrow.VRECompatibleBody2"
-        IfModNotActive="OTYOTY.SizedApparel,ChenDuXiu.Gene.MoreCuteYttakin">1.6/Mods/VRECompatibleBody2</li>
+        IfModNotActive="ChenDuXiu.Gene.MoreCuteYttakin">1.6/Mods/VRECompatibleBody2</li>
+    <li IfModActive="OTYOTY.SizedApparel"
+        IfModNotActive="ChenDuXiu.Gene.MoreCuteYttakin,Mainrrow.VRECompatibleBody2">1.6/Mods/SizedApparel</li>
     <li IfModActive="ScrubDaddy.Bodies"
-        IfModNotActive="OTYOTY.SizedApparel,ChenDuXiu.Gene.MoreCuteYttakin,Mainrrow.VRECompatibleBody2">1.6/Mods/ScrubDaddy</li>
+        IfModNotActive="ChenDuXiu.Gene.MoreCuteYttakin,Mainrrow.VRECompatibleBody2,OTYOTY.SizedApparel">1.6/Mods/ScrubDaddy</li>
   </v1.6>
 </loadFolders>

@@ -65,9 +65,10 @@ namespace BiotechMonkeContinued
                 defaultOn: true,
                 forcedOnByMods: new List<string>
                 {
-                    "OTYOTY.SizedApparel",
+                    // Same order as the LoadFolders priority, so the lock names the folder that loads.
                     "ChenDuXiu.Gene.MoreCuteYttakin",
                     "Mainrrow.VRECompatibleBody2",
+                    "OTYOTY.SizedApparel",
                     "ScrubDaddy.Bodies",
                 }),
         };
