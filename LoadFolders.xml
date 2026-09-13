@@ -14,6 +14,8 @@
     <!-- Facial Animation heads: NL-style painted head, or the vanilla-style baked heads when VTE supplies vanilla-styled faces. -->
     <li IfModNotActive="VanillaExpanded.VTEXE.FacialAnims">1.6/Mods/NoVTEFacialAnimation</li>
     <li IfModActive="VanillaExpanded.VTEXE.FacialAnims">1.6/Mods/VTEFacialAnimation</li>
+    <!-- Big and Small - Framework: tailed-humanoid body swap on the semi-furskin gene. -->
+    <li IfModActive="RedMattis.BetterPrerequisites">1.6/Mods/BigAndSmall</li>
     <!--
       Body mod folders. Exactly ONE loads: each folder is disallowed whenever a higher-priority
       body mod is active, so precedence is explicit and does not depend on patch order.
