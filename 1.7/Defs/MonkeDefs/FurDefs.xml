@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FurDef>
+    <defName>MonkeFur</defName>
+    <noGraphic>true</noGraphic>
+    <bodyTypeGraphicPaths>
+      <Male>Things/Pawn/Monkelike/MonkeBody/Fur/SemiFur_Male</Male>
+      <Female>Things/Pawn/Monkelike/MonkeBody/Fur/SemiFur_Female</Female>
+      <Hulk>Things/Pawn/Monkelike/MonkeBody/Fur/SemiFur_Hulk</Hulk>
+      <Fat>Things/Pawn/Monkelike/MonkeBody/Fur/SemiFur_Fat</Fat>
+      <Thin>Things/Pawn/Monkelike/MonkeBody/Fur/SemiFur_Thin</Thin>
+      <Child>Things/Pawn/Monkelike/MonkeBody/Fur/SemiFur_Child</Child>
+      <Baby>Things/Pawn/Monkelike/MonkeBody/Fur/SemiFur_Child</Baby><!-- Always covered by swaddled graphic -->
+    </bodyTypeGraphicPaths>
+  </FurDef>
+  
+</Defs>

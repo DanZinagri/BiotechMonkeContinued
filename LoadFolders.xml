@@ -10,9 +10,12 @@
   </v1.5>
   <v1.6>
     <li>/</li>
+    <li>Common</li>
     <li>1.6</li>
     <!-- Facial Animation heads: NL-style painted head, or the vanilla-style baked heads when VTE supplies vanilla-styled faces. -->
+    <li IfModNotActive="VanillaExpanded.VTEXE.FacialAnims">Common/Mods/NoVTEFacialAnimation</li>
     <li IfModNotActive="VanillaExpanded.VTEXE.FacialAnims">1.6/Mods/NoVTEFacialAnimation</li>
+    <li IfModActive="VanillaExpanded.VTEXE.FacialAnims">Common/Mods/VTEFacialAnimation</li>
     <li IfModActive="VanillaExpanded.VTEXE.FacialAnims">1.6/Mods/VTEFacialAnimation</li>
     <!-- Big and Small - Framework: tailed-humanoid body swap on the semi-furskin gene. -->
     <li IfModActive="RedMattis.BetterPrerequisites">1.6/Mods/BigAndSmall</li>
@@ -32,12 +35,57 @@
                                   body set is present, since the NL art is what the body draws
         4. Scrubdaddy's Bodies  - generic body set, overrides vanilla FurCovered paths
     -->
+    <li IfModActive="ChenDuXiu.Gene.MoreCuteYttakin">Common/Mods/Yttakin</li>
     <li IfModActive="ChenDuXiu.Gene.MoreCuteYttakin">1.6/Mods/Yttakin</li>
+    <li IfModActive="Mainrrow.VRECompatibleBody2"
+        IfModNotActive="ChenDuXiu.Gene.MoreCuteYttakin">Common/Mods/VRECompatibleBody2</li>
     <li IfModActive="Mainrrow.VRECompatibleBody2"
         IfModNotActive="ChenDuXiu.Gene.MoreCuteYttakin">1.6/Mods/VRECompatibleBody2</li>
     <li IfModActive="OTYOTY.SizedApparel"
         IfModNotActive="ChenDuXiu.Gene.MoreCuteYttakin,Mainrrow.VRECompatibleBody2">1.6/Mods/SizedApparel</li>
     <li IfModActive="ScrubDaddy.Bodies"
+        IfModNotActive="ChenDuXiu.Gene.MoreCuteYttakin,Mainrrow.VRECompatibleBody2,OTYOTY.SizedApparel">Common/Mods/ScrubDaddy</li>
+    <li IfModActive="ScrubDaddy.Bodies"
         IfModNotActive="ChenDuXiu.Gene.MoreCuteYttakin,Mainrrow.VRECompatibleBody2,OTYOTY.SizedApparel">1.6/Mods/ScrubDaddy</li>
   </v1.6>
+  <v1.7>
+    <li>/</li>
+    <li>Common</li>
+    <li>1.7</li>
+    <!-- Facial Animation heads: NL-style painted head, or the vanilla-style baked heads when VTE supplies vanilla-styled faces. -->
+    <li IfModNotActive="VanillaExpanded.VTEXE.FacialAnims">Common/Mods/NoVTEFacialAnimation</li>
+    <li IfModNotActive="VanillaExpanded.VTEXE.FacialAnims">1.7/Mods/NoVTEFacialAnimation</li>
+    <li IfModActive="VanillaExpanded.VTEXE.FacialAnims">Common/Mods/VTEFacialAnimation</li>
+    <li IfModActive="VanillaExpanded.VTEXE.FacialAnims">1.7/Mods/VTEFacialAnimation</li>
+    <!-- Big and Small - Framework: tailed-humanoid body swap on the semi-furskin gene. -->
+    <li IfModActive="RedMattis.BetterPrerequisites">1.7/Mods/BigAndSmall</li>
+    <!--
+      Body mod folders. Exactly ONE loads: each folder is disallowed whenever a higher-priority
+      body mod is active, so precedence is explicit and does not depend on patch order.
+
+      Patch order within this mod: RimWorld walks this list BACKWARDS, so patch files in the
+      LAST entry are applied FIRST and the root 1.7/Patches run after every Mods/ folder. Patch
+      files are also keyed by their path relative to each folder, so two folders must not both
+      contain e.g. Patches/Foo.xml - only one of them would load.
+
+      Priority, highest first:
+        1. Yttakin retexture    - a deliberate, specific NL furskin replacement
+        2. VRE NL Compatible Body 2 - NL body set, overrides vanilla FurCovered paths
+        3. Sized Apparel        - swaps the base body to its own shape; used only when no NL
+                                  body set is present, since the NL art is what the body draws
+        4. Scrubdaddy's Bodies  - generic body set, overrides vanilla FurCovered paths
+    -->
+    <li IfModActive="ChenDuXiu.Gene.MoreCuteYttakin">Common/Mods/Yttakin</li>
+    <li IfModActive="ChenDuXiu.Gene.MoreCuteYttakin">1.7/Mods/Yttakin</li>
+    <li IfModActive="Mainrrow.VRECompatibleBody2"
+        IfModNotActive="ChenDuXiu.Gene.MoreCuteYttakin">Common/Mods/VRECompatibleBody2</li>
+    <li IfModActive="Mainrrow.VRECompatibleBody2"
+        IfModNotActive="ChenDuXiu.Gene.MoreCuteYttakin">1.7/Mods/VRECompatibleBody2</li>
+    <li IfModActive="OTYOTY.SizedApparel"
+        IfModNotActive="ChenDuXiu.Gene.MoreCuteYttakin,Mainrrow.VRECompatibleBody2">1.7/Mods/SizedApparel</li>
+    <li IfModActive="ScrubDaddy.Bodies"
+        IfModNotActive="ChenDuXiu.Gene.MoreCuteYttakin,Mainrrow.VRECompatibleBody2,OTYOTY.SizedApparel">Common/Mods/ScrubDaddy</li>
+    <li IfModActive="ScrubDaddy.Bodies"
+        IfModNotActive="ChenDuXiu.Gene.MoreCuteYttakin,Mainrrow.VRECompatibleBody2,OTYOTY.SizedApparel">1.7/Mods/ScrubDaddy</li>
+  </v1.7>
 </loadFolders>

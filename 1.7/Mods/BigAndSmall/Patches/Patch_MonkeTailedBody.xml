@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/GeneDef[defName="Monke_Furskin"]/modExtensions</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/GeneDef[defName="Monke_Furskin"]/modExtensions</xpath>
+      <value>
+        <li Class="BigAndSmall.PawnExtension">
+          <thingDefSwap>BS_HumanoidWithTail</thingDefSwap>
+        </li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/GeneDef[defName="Monke_Furskin"]</xpath>
+      <value>
+        <modExtensions>
+          <li Class="BigAndSmall.PawnExtension">
+            <thingDefSwap>BS_HumanoidWithTail</thingDefSwap>
+          </li>
+        </modExtensions>
+      </value>
+    </nomatch>
+  </Operation>
+</Patch>

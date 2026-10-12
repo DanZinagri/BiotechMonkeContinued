@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef ParentName="OutlanderRoughBase">
+    <defName>MonkeOutlanderRough</defName>
+    <label>monke outlander union</label>
+    <description>These people have lived here for decades or centuries, and have lost most of the technology that brought them to this world. They usually work with simple machinery and defend themselves with advanced gunpowder weapons.\n\nThey are concerned with the practical matters of trade, trust, and survival.\n\nThis particular group has a streak of barbarity in them.</description>
+    <factionIconPath>World/WorldObjects/IconMonke</factionIconPath>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Monke MayRequire="Ludeon.RimWorld.Biotech">0.95</Monke>
+        <Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0.1</Dirtmole>
+        <Hussar MayRequire="Ludeon.RimWorld.Biotech">0.05</Hussar>
+        <Waster MayRequire="Ludeon.RimWorld.Biotech">0.025</Waster>
+        <Pigskin MayRequire="Ludeon.RimWorld.Biotech">0.025</Pigskin>
+        <Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.025</Neanderthal>
+        <Impid MayRequire="Ludeon.RimWorld.Biotech">0.025</Impid>
+        <Genie MayRequire="Ludeon.RimWorld.Biotech">0.025</Genie>
+        <Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.025</Yttakin>
+      </xenotypeChances>
+    </xenotypeSet>
+    <colorSpectrum>
+      <li>(1, 0.88, 0.21)</li>
+      <li>(0.22, 0.74, 0.11)</li>
+    </colorSpectrum>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <structureMemeWeights>
+      <Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistEmbodied>
+      <Structure_TheistAbstract MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistAbstract>
+      <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">2</Structure_Ideological>
+      <Structure_Animist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Animist>
+    </structureMemeWeights>
+  </FactionDef>
+
+</Defs>
