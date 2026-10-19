@@ -57,8 +57,10 @@
     <li IfModNotActive="VanillaExpanded.VTEXE.FacialAnims">1.7/Mods/NoVTEFacialAnimation</li>
     <li IfModActive="VanillaExpanded.VTEXE.FacialAnims">Common/Mods/VTEFacialAnimation</li>
     <li IfModActive="VanillaExpanded.VTEXE.FacialAnims">1.7/Mods/VTEFacialAnimation</li>
-    <!-- Big and Small - Framework: tailed-humanoid body swap on the semi-furskin gene. -->
-    <li IfModActive="RedMattis.BetterPrerequisites">1.7/Mods/BigAndSmall</li>
+    <!-- Big and Small - Framework: tailed-humanoid body swap on the semi-furskin gene, or on the
+         shared long tail gene when Hozen Xenotype is active. -->
+    <li IfModActive="RedMattis.BetterPrerequisites" IfModNotActive="Sov.mhmmmmonke">1.7/Mods/BigAndSmall</li>
+    <li IfModActiveAll="RedMattis.BetterPrerequisites,Sov.mhmmmmonke">1.7/Mods/BigAndSmallHozen</li>
     <!-- Hozen Xenotype: the two monkey xenotypes trade genes. -->
     <li IfModActive="Sov.mhmmmmonke">1.7/Mods/Hozen</li>
     <!--

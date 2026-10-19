@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hozen Xenotype + Big and Small: the tailed-humanoid body swap sits on the long tail gene both
+     xenotypes share (Monke gets it in place of the smooth tail), instead of on Monke's furskin. -->
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/GeneDef[defName="Tail_Monke"]/modExtensions</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/GeneDef[defName="Tail_Monke"]/modExtensions</xpath>
+      <value>
+        <li Class="BigAndSmall.PawnExtension">
+          <thingDefSwap>BS_HumanoidWithTail</thingDefSwap>
+        </li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/GeneDef[defName="Tail_Monke"]</xpath>
+      <value>
+        <modExtensions>
+          <li Class="BigAndSmall.PawnExtension">
+            <thingDefSwap>BS_HumanoidWithTail</thingDefSwap>
+          </li>
+        </modExtensions>
+      </value>
+    </nomatch>
+  </Operation>
+</Patch>
