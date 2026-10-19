@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hozen Xenotype (Sov.mhmmmmonke) is active: the two monkey xenotypes trade genes. -->
+<Patch>
+
+  <!-- Monke: poor shooting becomes the Hozen's easily distracted. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/XenotypeDef[defName="Monke"]/genes/li[.="AptitudePoor_Shooting"]</xpath>
+    <value>
+      <li>GS_distracted</li>
+    </value>
+  </Operation>
+
+  <!-- Monke: smooth tail becomes the Hozen's long tail. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/XenotypeDef[defName="Monke"]/genes/li[.="Tail_Smooth"]</xpath>
+    <value>
+      <li>Tail_Monke</li>
+    </value>
+  </Operation>
+
+  <!-- Monke: Alpha Genes' rowdy becomes the Hozen's unruly. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/XenotypeDef[defName="Monke"]/genes/li[.="AG_Rowdy"]</xpath>
+    <value>
+      <li>GS_Unruly</li>
+    </value>
+  </Operation>
+
+  <!-- Prehensile feet toned down to make up for the long tail's manipulation bonus. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="Prehensile_Feet"]/biostatMet</xpath>
+    <value>
+      <biostatMet>-3</biostatMet>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="Prehensile_Feet"]/capMods/li[capacity="Manipulation"]/offset</xpath>
+    <value>
+      <offset>0.4</offset>
+    </value>
+  </Operation>
+
+  <!-- Hozen join the Monke outlander faction. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/FactionDef[defName="MonkeOutlanderRough"]/xenotypeSet/xenotypeChances</xpath>
+    <value>
+      <GS_Hozen>0.25</GS_Hozen>
+    </value>
+  </Operation>
+
+  <!-- Hozen: with Alpha Genes also active, high survival instinct and naked speed. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/XenotypeDef[defName="GS_Hozen"]/genes</xpath>
+    <value>
+      <li MayRequire="sarg.alphagenes">AG_SurvivalInstinct_High</li>
+      <li MayRequire="sarg.alphagenes">NakedSpeed</li>
+    </value>
+  </Operation>
+
+</Patch>

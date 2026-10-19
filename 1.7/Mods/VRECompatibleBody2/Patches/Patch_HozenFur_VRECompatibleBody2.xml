@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Hozen Xenotype (Sov.mhmmmmonke): monkeyskin's body fur drawn exactly like Monke's in this
+       folder (same art, same Monke mask). Only the body fur node is replaced, so the gene itself
+       and its ABeard head attachment stay. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/GeneDef[defName="Gs_Apeskin"]/renderNodeProperties/li[parentTagDef="Body"]</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/GeneDef[defName="Gs_Apeskin"]/renderNodeProperties/li[parentTagDef="Body"]</xpath>
+      <value>
+        <li Class="BiotechMonkeContinued.PawnRenderNodeProperties_MaskedOverlay">
+          <debugLabel>Hozen fur (VRE NL Compatible Body 2 art, semi-fur mask)</debugLabel>
+          <bodyTypeGraphicPaths>
+            <Male>Things/Pawn/Humanlike/Bodies/FurCovered_Male</Male>
+            <Female>Things/Pawn/Humanlike/Bodies/FurCovered_Female</Female>
+            <Hulk>Things/Pawn/Humanlike/Bodies/FurCovered_Hulk</Hulk>
+            <Fat>Things/Pawn/Humanlike/Bodies/FurCovered_Fat</Fat>
+            <Thin>Things/Pawn/Humanlike/Bodies/FurCovered_Thin</Thin>
+            <Child>Things/Pawn/Humanlike/Bodies/Naked_FurChild</Child>
+            <Baby>Things/Pawn/Humanlike/Bodies/Naked_FurChild</Baby>
+          </bodyTypeGraphicPaths>
+          <bodyTypeMaskPaths>
+            <Male>Masks/Male</Male>
+            <Female>Masks/Female</Female>
+            <Hulk>Masks/Hulk</Hulk>
+            <Fat>Masks/Fat</Fat>
+            <Thin>Masks/Thin</Thin>
+            <Child>Masks/Child</Child>
+            <Baby>Masks/Child</Baby>
+          </bodyTypeMaskPaths>
+          <baseLayer>5</baseLayer>
+          <rotDrawMode>Fresh, Rotting</rotDrawMode>
+          <colorType>Hair</colorType>
+          <parentTagDef>Body</parentTagDef>
+        </li>
+      </value>
+    </match>
+  </Operation>
+</Patch>
