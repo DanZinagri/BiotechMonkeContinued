@@ -18,6 +18,46 @@
     </value>
   </Operation>
 
+  <!-- Long tail drawn 0.14 higher so its base sits where vanilla's smooth tail meets the body
+       (measured: vanilla base z -0.30, Hozen art base z -0.33 to -0.45, avg -0.38; 0.14 chosen in-game: variant B needs ~0.15, the rest sit slightly high). Hozen's def
+       declares an empty dataWest, so west does not mirror east and needs its own offset. -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="Tail_Monke"]/renderNodeProperties/li/drawData/dataNorth</xpath>
+    <value>
+      <dataNorth>
+        <offset>(0, 0, 0.14)</offset>
+        <layer>90</layer>
+      </dataNorth>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="Tail_Monke"]/renderNodeProperties/li/drawData/dataSouth</xpath>
+    <value>
+      <dataSouth>
+        <offset>(0, 0, 0.14)</offset>
+      </dataSouth>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="Tail_Monke"]/renderNodeProperties/li/drawData/dataEast</xpath>
+    <value>
+      <dataEast>
+        <offset>(0, 0, 0.14)</offset>
+      </dataEast>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/GeneDef[defName="Tail_Monke"]/renderNodeProperties/li/drawData/dataWest</xpath>
+    <value>
+      <dataWest>
+        <offset>(0, 0, 0.14)</offset>
+      </dataWest>
+    </value>
+  </Operation>
+
   <!-- Monke: Alpha Genes' rowdy becomes the Hozen's unruly. -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/XenotypeDef[defName="Monke"]/genes/li[.="AG_Rowdy"]</xpath>
